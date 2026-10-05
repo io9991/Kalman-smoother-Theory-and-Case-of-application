@@ -9,7 +9,7 @@ A data analysis and signal processing project focused on the optimal estimation 
 This project applies the **Rauch-Tung-Striebel (RTS) Kalman Smoother** to estimate the time-varying parameters of an Autoregressive (AR) model to track the spectral evolution of Electroencephalographic (EEG) signals. Specifically, it analyzes the transient neurophysiological phase shift between **Event-Related Desynchronization (ERD)** and **Event-Related Synchronization (ERS)**.
 
 <p align="center">
-  <img src="Immagini\psdSpettro" width="600" alt="Time-Varying PSD via Kalman Smoother">
+  <img src="Immagini\psdSpettro.png" width="600" alt="Time-Varying PSD via Kalman Smoother">
 </p>
 *Time-varying Power Spectral Density (Spectrogram) generated via smoothed AR(6) coefficients. Notice the sudden emergence of the Alpha Rhythm (8-12 Hz) exactly at t = 60s when the subject closes their eyes.*
 
@@ -37,7 +37,7 @@ The RTS algorithm performs a second pass from the final time step down to $k=1$.
 The smoothing gain $G(k)$ optimally weights future information. As seen in the results, the smoother completely ignores false peaks and maintains a stable, highly accurate parameter estimate.
 
 <p align="center">
-  <img src="Immagini\confronto" width="600" alt="Recursive Tracking of AR(6) Parameters: Filter vs Smoother">
+  <img src="Immagini\confronto.png" width="600" alt="Recursive Tracking of AR(6) Parameters: Filter vs Smoother">
 </p>
 *Visual demonstration of the RTS Smoother (solid line) ignoring a false noise peak that destabilizes the standard forward Kalman Filter (dashed line).*
 
